@@ -1,20 +1,20 @@
 {
   "name": "@flex-cache/types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {},
   "description": "Base cache logic, which operates with Cache Storages.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "tsc"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mavricus/cache.git"
   },
   "files": [
-    "dist",
+    "dist/**/*",
     "LICENSE",
     "README.md",
     "package.json"
