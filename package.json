@@ -1,6 +1,6 @@
 {
   "name": "@flex-cache/types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {},
   "description": "Base cache logic, which operates with Cache Storages.",
   "main": "dist/index.js",
