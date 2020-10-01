@@ -1,1 +1,2 @@
-export * from './src/CacheController';
+export * from './src/FlexCache';
+export * from './src/FlexCache.stub';

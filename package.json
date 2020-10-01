@@ -1,7 +1,9 @@
 {
   "name": "@flex-cache/types",
-  "version": "1.0.2",
-  "dependencies": {},
+  "version": "2.0.0",
+  "dependencies": {
+    "sinon": "^9.1.0"
+  },
   "description": "Base cache logic, which operates with Cache Storages.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -23,12 +25,13 @@
     "cache"
   ],
   "author": "Mavricus",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Mavricus/cache/issues"
   },
   "homepage": "https://github.com/Mavricus/cache#readme",
   "devDependencies": {
+    "@types/sinon": "^9.0.7",
     "typescript": "^4.0.3"
   }
 }
