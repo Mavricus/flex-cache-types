@@ -7,7 +7,8 @@ export class FlexCacheStub implements IFlexCache {
         delete: SinonStub;
         get: SinonStub;
         set: SinonStub;
-        const: SinonStub;
+        setForce: SinonStub;
+        update: SinonStub;
     }
 
     constructor() {
@@ -15,7 +16,8 @@ export class FlexCacheStub implements IFlexCache {
             get: sinon.stub(),
             delete: sinon.stub(),
             set: sinon.stub(),
-            const: sinon.stub()
+            setForce: sinon.stub(),
+            update: sinon.stub()
         }
     }
 
@@ -31,14 +33,19 @@ export class FlexCacheStub implements IFlexCache {
         return this.stubs.set(name, data, ttl);
     }
 
-    const<T>(name: string, data: T, ttl: number): Promise<void> {
+    setForce<T>(name: string, data: T, ttl: number): Promise<void> {
+        return this.stubs.setForce(name, data, ttl);
+    }
+
+    update<T>(name: string, data: T, ttl: number): Promise<void> {
         return this.stubs.set(name, data, ttl);
     }
 
     reset() {
         this.stubs.set.reset();
+        this.stubs.setForce.reset();
         this.stubs.get.reset();
         this.stubs.delete.reset();
-        this.stubs.const.reset();
+        this.stubs.update.reset();
     }
 }
