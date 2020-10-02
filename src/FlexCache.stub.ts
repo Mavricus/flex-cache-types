@@ -38,14 +38,6 @@ export class FlexCacheStub implements IFlexCache {
     }
 
     update<T>(name: string, data: T, ttl: number): Promise<void> {
-        return this.stubs.set(name, data, ttl);
-    }
-
-    reset() {
-        this.stubs.set.reset();
-        this.stubs.setForce.reset();
-        this.stubs.get.reset();
-        this.stubs.delete.reset();
-        this.stubs.update.reset();
+        return this.stubs.update(name, data, ttl);
     }
 }
